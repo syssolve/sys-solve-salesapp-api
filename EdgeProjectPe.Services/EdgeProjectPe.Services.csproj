@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Service\**" />
+    <EmbeddedResource Remove="Service\**" />
+    <None Remove="Service\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Microsoft.EntityFrameworkCore.Analyzers" />
+    <None Remove="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EdgeProjectPe.DB\EdgeProjectPe.DB.csproj" />
+  </ItemGroup>
+</Project>
